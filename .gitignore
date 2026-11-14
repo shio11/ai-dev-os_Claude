@@ -1,0 +1,16 @@
+# 誤って秘密情報や履歴をコミットしないための保険
+.credentials.json*
+.claude.json
+settings.local.json
+settings.json
+!claude/settings.template.json
+projects/
+sessions/
+session-env/
+shell-snapshots/
+file-history/
+backups/
+cache/
+debug/
+__pycache__/
+*.pyc

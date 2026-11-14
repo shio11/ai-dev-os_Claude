@@ -1,0 +1,2 @@
+- [Python新規着手時はSKILL.mdを読む](feedback_python_skill.md) — .agents/skills/python/SKILL.md のOOP/構成ルールに従う
+- [JS作成・修正時はSKILL.mdを読む](feedback_javascript_skill.md) — .agents/skills/javascript/SKILL.md に従う（medini用は対象外）
