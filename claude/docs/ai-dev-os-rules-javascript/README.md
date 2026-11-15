@@ -4,6 +4,7 @@ JavaScript version of [yunbow/ai-dev-os-rules-typescript](https://github.com/yun
 
 * **Browser UI** started from a Python app, without npm — `frameworks/browser`
 * **Node.js tools** (CLI, MCP server) — `frameworks/nodejs-cli`
+* **medini analyze 25.1 scripts** (Rhino, ES5) — `frameworks/medini` (overrides the common syntax / type / test rules)
 
 ## How it differs from the TypeScript rules
 
@@ -20,6 +21,7 @@ JavaScript version of [yunbow/ai-dev-os-rules-typescript](https://github.com/yun
 | common/code.md, naming.md, validation.md, error-handling.md, security.md, testing.md, performance.md | Rewritten for browser JS, keeping the TypeScript rules' structure and intent |
 | frameworks/browser/project-structure.md | Project-specific rules for the Python-started browser UI |
 | frameworks/nodejs-cli/*.md | Converted from the TypeScript rules (code examples in JSDoc form) |
+| frameworks/medini/project-structure.md | Written from the existing scripts in shio11/medini |
 
 Not carried over: cicd, cors, env, i18n, logging, rate-limiting, and all nextjs files. L1/L2 (philosophy, decision criteria) are shared with the Python rules in `~/.claude/docs/ai-dev-os`.
 
