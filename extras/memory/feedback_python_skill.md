@@ -1,12 +1,12 @@
 ---
 name: feedback-python-skill
-description: Python新規着手時は必ず .agents/skills/python/SKILL.md を先に読んで従う
+description: Python の実装は ~/.claude/CLAUDE.md が参照する AI DEV OS ガイドラインに従う（旧 SKILL.md は廃止）
 metadata:
   node_type: memory
   type: feedback
 ---
 
-Pythonコードを新規に実装・生成する前に、必ず `{{PROJECT_DIR}}/.agents/skills/python/SKILL.md` を読み、そのルール（OOP・SRP・カプセル化・規模別構成・main.pyは組み立てのみ・構成案を先に提示）に従う。
+Python の実装は、`~/.claude/CLAUDE.md` が参照する AI DEV OS ガイドライン（common/security.md・validation.md、frameworks/python-cli/project-structure.md、project-specific/python-windows.md）に従う。`.agents/skills/python/SKILL.md` は廃止済みで、読まない。
 
-**Why:** drbfm_auto 実装時に読まずに関数型で作り、ルール違反を指摘された（2026-10-12）。
-**How to apply:** 新規Python着手の最初の操作でSKILL.mdをReadする。グローバルCLAUDE.mdの関数型志向と衝突する場合は、不変クラス＋副作用を境界に集める形で両立させる。
+**Why:** ルールを AI DEV OS ガイドラインに一本化し、旧 SKILL.md は削除した（2026-11-15）。
+**How to apply:** Python に着手する前に CLAUDE.md のガイドラインを読む。JS/TS も触る場合は [[feedback-javascript-skill]] も参照。

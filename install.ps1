@@ -6,7 +6,7 @@
   インストール先（既定: $env:USERPROFILE\.claude）
 
 .PARAMETER ProjectDir
-  指定すると、extras のプロジェクト用スキル（.agents/skills）とメモリを
+  指定すると、extras のメモリ（AI DEV OS ガイドラインに従う指示）を
   そのプロジェクトに設定する。
 
 .PARAMETER SkipSettings
@@ -119,11 +119,6 @@ Get-Content -Encoding UTF8 (Join-Path $RepoRoot 'dependencies.txt') |
 # --- プロジェクト用（任意） ---
 if ($ProjectDir) {
     $ProjectDir = (Resolve-Path $ProjectDir).Path
-    $skillsDest = Join-Path $ProjectDir '.agents\skills'
-    New-Item -ItemType Directory -Force $skillsDest | Out-Null
-    Copy-Item -Recurse -Force (Join-Path $RepoRoot 'extras\agents-skills\*') $skillsDest
-    Write-Host "プロジェクト用スキル: $skillsDest"
-
     # Claude Code はプロジェクトパスの英数字以外を '-' にしてメモリフォルダ名にする
     $encoded = $ProjectDir -replace '[^A-Za-z0-9]', '-'
     $memDir = Join-Path $ClaudeHome "projects\$encoded\memory"

@@ -92,10 +92,6 @@ done
 
 if [ -n "$PROJECT_DIR" ]; then
   PROJECT_DIR="$(cd "$PROJECT_DIR" && pwd)"
-  mkdir -p "$PROJECT_DIR/.agents/skills"
-  cp -R "$REPO_ROOT/extras/agents-skills/." "$PROJECT_DIR/.agents/skills/"
-  echo "プロジェクト用スキル: $PROJECT_DIR/.agents/skills"
-
   # Claude Code はプロジェクトパスの英数字以外を '-' にしてメモリフォルダ名にする
   encoded="$(printf '%s' "$PROJECT_DIR" | sed 's/[^A-Za-z0-9]/-/g')"
   mem_dir="$CLAUDE_HOME/projects/$encoded/memory"
