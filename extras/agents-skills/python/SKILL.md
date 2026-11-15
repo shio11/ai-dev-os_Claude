@@ -47,6 +47,35 @@ Pythonコードを実装・生成する際は、以下の設計要件・構成�
 - 各サブモジュールは `main.py` からimportされることを前提に、単体でも再利用・テスト可能な設計にすること
 - ディレクトリ構成案を最初に提示してから実装すること
 
+### 起動とエントリーポイント（パッケージに分けた構成）
+`src/` 配下をパッケージに分けた場合は、次の形で起動できるようにすること。
+- コード本体は `src/<パッケージ名>/` に置き、`src/<パッケージ名>/__main__.py` に `main()` を持たせること（`python -m <パッケージ名>` でも起動できる）
+- 起動用の `main.py` はリポジトリのルートに置き、`src` に残さないこと
+  - パッケージをインストールせずに起動できるよう、`sys.path` に `src` を加えてから `<パッケージ名>.__main__.main()` を呼ぶだけにすること
+  - `if __name__ == "__main__":` ブロックから `main()` を呼ぶ形は共通ルールと同じ
+- 起動はリポジトリのルートで `uv run main.py`、テストは `uv run pytest` とすること
+- 上位フォルダ（例: `my-python-app`）の `.venv` を共有する場合は、`pyproject.toml` に `[tool.uv]` の `managed = false` を書き、リポジトリ専用の `.venv`・`uv.lock` を作らないこと
+- `pyproject.toml` の `[tool.pytest.ini_options]` に `pythonpath = ["src"]` を、`[tool.setuptools.packages.find]` に `where = ["src"]` を書くこと
+- テストは `tests/unit/` に、`src/<パッケージ名>/` と同じ構成で置くこと
+- README の「起動方法」に、ルートで `uv run main.py` を実行することと、`.venv` の扱いを書くこと
+
+ルートの `main.py` の例:
+
+```python
+"""起動用のエントリーポイント（リポジトリのルートで uv run main.py）"""
+
+import sys
+from pathlib import Path
+
+# パッケージをインストールせずに起動できるよう、src を import の検索先に加える
+sys.path.insert(0, str(Path(__file__).resolve().parent / "src"))
+
+from my_package.__main__ import main  # noqa: E402
+
+if __name__ == "__main__":
+    main()
+```
+
 ## 出力形式
 新規にPythonプログラムを実装する際は、以下の順で提示すること。
 - ディレクトリ構成（ツリー形式）
