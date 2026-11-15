@@ -45,6 +45,7 @@ TypeScript / JavaScript: read the same common files under ~/.claude/docs/ai-dev-
 <!-- Your project's custom rules — these are always high-value because
      the AI cannot infer them from training data -->
 - Python: ~/.claude/docs/guidelines/project-specific/python-windows.md
+- JavaScript that runs as the browser UI of a Python app (started by main.py): ~/.claude/docs/guidelines/project-specific/javascript-browser.md — for this kind of JS, use its structure instead of frameworks/nodejs-cli or nextjs.
 
 ## Quality Workflow
 
