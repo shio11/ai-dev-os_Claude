@@ -39,10 +39,9 @@ static/
 ```
 - 大きくなったら `api/`・`types/`・`lib/`・`views/<screen>.js` のフォルダに分ける（1ファイル200〜300行が目安）。
 - 依存は `app → views → (api, lib) → types` の一方向。`fetch` は `api` だけ、`document` は `views` と `app` だけが触る。`app.js` 以外は読み込まれただけで副作用を起こさない。
-- 構成案（ツリー）を最初に提示してから実装する。
 
 ## 型・不変性
-- JS を置くフォルダに `jsconfig.json`（`checkJs: true`、`strict: true`、`noEmit: true`、`lib/`・`*.min.js` は除外）を置き、JSDoc で引数・戻り値・データ構造を型付けする。`any` は使わず、不明な値は `unknown` で受けて絞り込む。
+- JS を置くフォルダに `jsconfig.json`（`checkJs: true`、`strict: true`、`noEmit: true`、`lib/`・`*.min.js` は除外）を置き、JSDoc で引数・戻り値・データ構造を型付けする。
 - API のレスポンス・埋め込み JSON・`localStorage`・フォーム値・URL パラメータは信頼せず、受け取った境界で検証してから内部に渡す（common/validation.md の Zod 等は使えないため、ガード関数とファクトリ関数で検証する）。
 - `types.js` の型は Python 側のモデルと項目名・型を1対1で対応させ、Python 側を変えたら同じ変更で更新する。
 - データはクラスにせず、検証付きのファクトリ関数＋`Object.freeze` で表す。クラスは状態と振る舞いを持つものに限り、`#name` でカプセル化する。
