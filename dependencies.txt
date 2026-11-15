@@ -1,6 +1,5 @@
 # 外部リポジトリ（インストール時に ~/.claude 配下へ clone する）
 # 書式: <~/.claude からの相対パス>|<リポジトリURL>|<コミット（空ならデフォルトブランチ最新）>
 docs/ai-dev-os|https://github.com/yunbow/ai-dev-os-rules-python|5fbd48996e5e96b340fcb119b5924cd283cf5ccb
-docs/ai-dev-os-rules|https://github.com/yunbow/ai-dev-os-rules-typescript.git|312ab6f143a7e10168e9ee15e6040243250a6ab0
 .claude/plugins/ai-dev-os|https://github.com/yunbow/ai-dev-os-plugin-claude-code|57d885a5afaba95c8938593339d8fbe94f6712b3
 skills/antivibe|https://github.com/mohi-devhub/antivibe.git|9991d12ec52bc0b90eeab893fef27398be1ef616

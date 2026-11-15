@@ -24,7 +24,7 @@ Python:
 - ~/.claude/docs/ai-dev-os/03_guidelines/common/validation.md
 - ~/.claude/docs/ai-dev-os/03_guidelines/frameworks/python-cli/project-structure.md
 
-TypeScript / JavaScript: read the same common files under ~/.claude/docs/ai-dev-os-rules/03_guidelines/, plus frameworks/nodejs-cli/project-structure.md (or frameworks/nextjs/project-structure.md for Next.js).
+JavaScript: read the same common files under ~/.claude/docs/ai-dev-os-rules-javascript/03_guidelines/, plus frameworks/browser/project-structure.md (browser UI started from a Python app) or frameworks/nodejs-cli/project-structure.md (Node.js tools).
 
 <!-- Optional — add only if your project needs these -->
 # - ~/.claude/docs/ai-dev-os/03_guidelines/common/error-handling.md
@@ -45,7 +45,6 @@ TypeScript / JavaScript: read the same common files under ~/.claude/docs/ai-dev-
 <!-- Your project's custom rules — these are always high-value because
      the AI cannot infer them from training data -->
 - Python: ~/.claude/docs/guidelines/project-specific/python-windows.md
-- JavaScript that runs as the browser UI of a Python app (started by main.py): ~/.claude/docs/guidelines/project-specific/javascript-browser.md — for this kind of JS, use its structure instead of frameworks/nodejs-cli or nextjs.
 
 ## Quality Workflow
 

@@ -10,6 +10,7 @@ AI DEV OS を組み込んだ Claude Code のユーザー設定（`~/.claude`）�
 | `claude/settings.template.json` | env（`CLAUDE_AUTOCOMPACT_PCT_OVERRIDE` など）、hooks、無効化プラグイン、statusLine | `~/.claude/settings.json` |
 | `claude/skills/ai-dev-os-*` | `/ai-dev-os-plan` などのスキル | `~/.claude/skills/` |
 | `claude/docs/guidelines/` | プロジェクト固有ガイドライン（`python-windows.md`） | `~/.claude/docs/guidelines/` |
+| `claude/docs/ai-dev-os-rules-javascript/` | JavaScript 用ルール（TypeScript 版ルールを JS 化。ブラウザ画面と Node.js ツール） | `~/.claude/docs/ai-dev-os-rules-javascript/` |
 | `claude/statusline.*` | ステータスライン | `~/.claude/` |
 | `claude/.ai-dev-os.yaml` | ai-dev-os CLI の構成 | `~/.claude/` |
 | `dependencies.txt` | 外部リポジトリ（ルール集・プラグイン・antivibe）とコミット | `~/.claude/docs/ai-dev-os` ほか |

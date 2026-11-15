@@ -1,6 +1,6 @@
 # JavaScript 追加ルール（Python アプリのブラウザ画面）
 
-Python の `main.py` が起動するアプリの画面として、ブラウザで動く JavaScript のルール。この種類の JS には frameworks/nodejs-cli・nextjs の構成を当てはめず、こちらの構成に従う。common（security・validation 等）はそのまま適用する。
+Python の `main.py` が起動するアプリの画面として、ブラウザで動く JavaScript のルール。Node.js で動くツールは frameworks/nodejs-cli に従う。common（security・validation 等）はそのまま適用する。
 
 ## 適用範囲
 - 新規のファイル・関数には全て適用する。既存のファイルを直すときは、変更箇所だけに適用し、周辺の書き方（読み込み方式・命名・グローバル関数の使い方）に合わせる。

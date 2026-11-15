@@ -1,0 +1,18 @@
+# Node.js CLI Tool Guidelines
+
+Framework-specific guidelines for building CLI tools with Node.js and JavaScript (ES Modules, JSDoc types checked by `checkJs`, no build step).
+See [overview.md](./overview.md) for the full technology stack and replaceable library table.
+
+## File List
+
+| File | Topic | Replaceable Library |
+|------|-------|-------------------|
+| [overview.md](./overview.md) | Technology Stack & Replaceable Libraries | — |
+| [project-structure.md](./project-structure.md) | Directory Structure & Architecture | — |
+| [cli-design.md](./cli-design.md) | Command Design, Options & Arguments | yargs, clipanion, citty |
+| [pipeline.md](./pipeline.md) | Pipeline Orchestration & Step Management | — |
+| [config.md](./config.md) | Configuration Resolution & Defaults | cosmiconfig, c12 |
+| [process-lifecycle.md](./process-lifecycle.md) | Exit Codes, Signals & I/O | — |
+| [mcp-server.md](./mcp-server.md) | MCP Server: Transport Constraints, Tool Design, Multi-Turn Patterns | @modelcontextprotocol/sdk |
+
+> Files marked with a replaceable library contain `[Replaceable]` notes at the top. The architectural principles remain the same regardless of the library chosen.
