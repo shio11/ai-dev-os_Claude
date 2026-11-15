@@ -13,8 +13,7 @@ AI DEV OS を組み込んだ Claude Code のユーザー設定（`~/.claude`）�
 | `claude/statusline.*` | ステータスライン | `~/.claude/` |
 | `claude/.ai-dev-os.yaml` | ai-dev-os CLI の構成 | `~/.claude/` |
 | `dependencies.txt` | 外部リポジトリ（ルール集・プラグイン・antivibe）とコミット | `~/.claude/docs/ai-dev-os` ほか |
-| `extras/agents-skills/` | Python / JavaScript 用 SKILL.md（プロジェクト単位） | `<project>/.agents/skills/` |
-| `extras/memory/` | 上記 SKILL.md を読ませるメモリ | `~/.claude/projects/<project>/memory/` |
+| `extras/memory/` | AI DEV OS ガイドラインに従うよう指示するメモリ（プロジェクト単位） | `~/.claude/projects/<project>/memory/` |
 
 ## 含めていないもの
 
@@ -40,7 +39,7 @@ cd ai-dev-os_Claude
 powershell -ExecutionPolicy Bypass -File .\install.ps1
 ```
 
-Python / JavaScript 用の SKILL.md とメモリもプロジェクトに入れる場合:
+プロジェクト用のメモリも入れる場合:
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\install.ps1 -ProjectDir C:\path\to\my-python-app
